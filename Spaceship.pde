@@ -21,4 +21,9 @@ class Spaceship extends Floater
       myYspeed = 1;
       myPointDirection = 0;
     }
+    
+    public void setXspeed(double x) {
+      myXspeed = x;
+    }
+    
 }
