@@ -27,6 +27,8 @@ public void draw()
       sam.setYspeed(0);
       sam.setXspeed(0);
       sam.turn(Math.random()*360);
+      sam.setCenterY();
+      sam.setCenterX();
     }
   }
   sam.move();
