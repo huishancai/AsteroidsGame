@@ -17,11 +17,14 @@ public void draw()
     bob[i].show();
   }
   if (keyPressed) {
-    if(key == 'a' || key == 'A') {
+    if(key == 't' || key == 'T') {
       sam.turn(-10);
     }
-    if(key == ' ') {
+    if(key == 'a' || key == 'A') {
       sam.accelerate(0.2);
+    }
+    if(key == 'd' || key == 'D') {
+      sam.accelerate(-0.2);
     }
     if(key == 'h' || key == 'H') {
       sam.setYspeed(0);
