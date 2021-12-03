@@ -24,6 +24,7 @@ public void draw()
       sam.accelerate(0.2);
     }
     if(key == 'h' || key == 'H') {
+      sam.setYspeed(0);
       sam.setXspeed(0);
       sam.turn(Math.random()*360);
     }
