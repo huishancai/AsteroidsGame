@@ -23,6 +23,10 @@ public void draw()
     if(key == ' ') {
       sam.accelerate(0.2);
     }
+    if(key == 'h' || key == 'H') {
+      sam.setXspeed(0);
+      sam.turn(Math.random()*360);
+    }
   }
   sam.move();
   sam.show();
