@@ -1,19 +1,15 @@
-//your variable declarations here
-Star [] bob = new Star[250];
-Spaceship sam = new Spaceship();
-Asteroid tim = new Asteroid();
-public void setup() 
-{
-  //your code here
-  size(500,500);
-  for (int i = 0; i < bob.length; i++) {
-    bob[i] = new Star();
-  }
-}
 public void draw() 
 {
   //your code here
   background(0);
+  for (int i = 0; i < tim.size(); i++) {
+    tim.get(i).show();
+    tim.get(i).move();
+    float d = dist((float)sam.getMyCenterX(), (float)sam.getMyCenterY(),
+    (float)tim.get(i).getMyCenterX(), (float)tim.get(i).getMyCenterY());
+    if (d<10)
+      tim.remove(i);
+  }
   for (int i = 0; i < bob.length; i++) {
     bob[i].show();
   }
@@ -38,6 +34,4 @@ public void draw()
   sam.move();
   sam.show();
   
-  tim.show();
-  tim.move();
 }
